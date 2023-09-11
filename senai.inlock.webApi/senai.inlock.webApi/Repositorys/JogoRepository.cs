@@ -23,7 +23,7 @@ namespace senai.inlock.webApi_.Repositorys
         {
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                string queryInsert = "INSER INTO Jogo(Nome, Descricao, DataLancamento, Valor, IdEstudio) VALUES (@Nome, @Descricao, @DataLancamento, @Valor, @IdEstudio)";
+                string queryInsert = "INSERT INTO Jogo(Nome, Descricao, DataLancamento, Valor, IdEstudio) VALUES (@Nome, @Descricao, @DataLancamento, @Valor, @IdEstudio)";
 
                 con.Open();
 
@@ -69,6 +69,7 @@ namespace senai.inlock.webApi_.Repositorys
         public List<JogoDomain> ListarTodos()
         {
             List<JogoDomain> ListaJogo = new List<JogoDomain>();
+
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
                 string querySelectAll = "SELECT IdJogo, Estudio.IdEstudio, Jogo.Nome, DataLancamento, Valor, Descricao, Estudio.Nome FROM Jogo JOIN Estudio ON Jogo.IdEstudio = Estudio.IdEstudio";
@@ -79,7 +80,7 @@ namespace senai.inlock.webApi_.Repositorys
                 {
                     rdr= cmd.ExecuteReader();
 
-                    if(rdr.Read())
+                    while(rdr.Read())
                     {
                         JogoDomain jogoBuscado = new JogoDomain()
                         {

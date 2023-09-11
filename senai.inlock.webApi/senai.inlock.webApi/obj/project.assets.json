@@ -1645,11 +1645,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\47349403801\\Desktop\\api_filmes\\senai.inlock.webApi\\senai.inlock.webApi\\senai.inlock.webApi..csproj",
+      "projectUniqueName": "C:\\Users\\47349403801\\Desktop\\api_inlock\\senai.inlock.webApi\\senai.inlock.webApi\\senai.inlock.webApi..csproj",
       "projectName": "senai.inlock.webApi.",
-      "projectPath": "C:\\Users\\47349403801\\Desktop\\api_filmes\\senai.inlock.webApi\\senai.inlock.webApi\\senai.inlock.webApi..csproj",
+      "projectPath": "C:\\Users\\47349403801\\Desktop\\api_inlock\\senai.inlock.webApi\\senai.inlock.webApi\\senai.inlock.webApi..csproj",
       "packagesPath": "C:\\Users\\47349403801\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\47349403801\\Desktop\\api_filmes\\senai.inlock.webApi\\senai.inlock.webApi\\obj\\",
+      "outputPath": "C:\\Users\\47349403801\\Desktop\\api_inlock\\senai.inlock.webApi\\senai.inlock.webApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\47349403801\\AppData\\Roaming\\NuGet\\NuGet.Config",
