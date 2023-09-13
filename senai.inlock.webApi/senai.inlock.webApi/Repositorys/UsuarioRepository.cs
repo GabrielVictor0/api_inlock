@@ -50,7 +50,7 @@ namespace senai.inlock.webApi_.Repositorys
         {
             using (SqlConnection con = new SqlConnection(StringConexao))
             {
-                String queryLogin = "SELECT IdUsuario, Email, Senha, Permissao FROM Usuario WHERE Email = @Email AND Senha = @Senha";
+                String queryLogin = "SELECT IdUsuario, Email, Senha, IdTipoUsuario FROM Usuario WHERE Email = @Email AND Senha = @Senha";
 
                 SqlDataReader rdr;
 
@@ -65,8 +65,16 @@ namespace senai.inlock.webApi_.Repositorys
 
                     if(rdr.Read())
                     {
+                        UsuarioDomain user = new UsuarioDomain()
+                        {
+                            Email = rdr["Email"].ToString(),
+                            IdTipoUsuario = Convert.ToInt32(rdr["IdTipoUsuario"]),
+                            IdUsuario = Convert.ToInt32(rdr["IdUsuario"])
+                        };
 
+                        return user;
                     }
+                    return null;
                 }
             }
         }

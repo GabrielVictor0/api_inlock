@@ -35,5 +35,8 @@ namespace senai.inlock.webApi_.Controllers
                 return BadRequest(error.Message);
             }
         }
+
+        [HttpPost]
+
     }
 }
